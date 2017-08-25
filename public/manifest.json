@@ -2,7 +2,7 @@
   "name": "Your app name",
   "short_name": "Your app",
   "icons": [{
-    "src": "images/icon-192x192.png",
+    "src": "images/pic.png",
     "sizes": "192x192",
     "type": "image/png"
   }],

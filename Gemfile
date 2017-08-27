@@ -20,6 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'serviceworker-rails'
+gem "webpush"
+gem 'jquery-rails'
 
 
 # Use CoffeeScript for .coffee assets and views

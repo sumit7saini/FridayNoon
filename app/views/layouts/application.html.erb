@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+  <button class="js-push-button">Send a message</button>
+
+  <script type="text/javascript">
+      (function() {
+          $('.js-push-button').on("click", function onClick() {
+              $.post("/push");
+          });
+      })();
+  </script>
+
+  <%= yield %>
   </body>
 </html>

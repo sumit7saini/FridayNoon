@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
@@ -20,6 +22,7 @@ if ('serviceWorker' in navigator) {
             console.log('Successfully registered!', ':^)', registration);
             registration.pushManager.subscribe({ userVisibleOnly: true })
                 .then(function(subscription) {
+                    $.post("/subscribe", { subscription: subscription.toJSON() });
                     console.log('endpoint:', subscription.endpoint);
                 });
         }).catch(function(error) {
